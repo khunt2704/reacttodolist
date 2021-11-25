@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Todolist from "./Todolist";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
     const [inputlist, setInputlist] = useState("");
@@ -28,10 +29,12 @@ const App = () => {
 
     return(
         <>
-            <div className="main_div">
-            <div className="center_div">
+        <div className="container-fluid main_div">
+        <div className="row center_div">
+            
                 <br />
                 <br />
+                <div className="col-md-6 mx-auto">
                 <h1>Todo List</h1>
                 <br />
                 <input type='text' placeholder=" Add a Items" onChange={itemEvent}
@@ -51,6 +54,7 @@ const App = () => {
                     } ) }
 
                 </ol>
+                </div>
             </div>
             </div>
         </>
